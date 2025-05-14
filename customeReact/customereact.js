@@ -1,4 +1,4 @@
-function customRender(reactElement, container){
+function customRender(reactElement, container) {
     // const domElement = document.createElement(reactElement.type)
     // domElement.innerHTML = reactElement.children
     // domElement.setAttribute('href', reactElement.props.href)
@@ -9,7 +9,7 @@ function customRender(reactElement, container){
     const domElement = document.createElement(reactElement.type)
     domElement.innerHTML = reactElement.children
     for (const prop in reactElement.props) {
-        if (prop == reactElement.children) continue
+        if (prop === reactElement.children) continue
         domElement.setAttribute(prop, reactElement.props[prop])
     }
     container.appendChild(domElement)
